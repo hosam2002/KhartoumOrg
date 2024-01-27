@@ -619,6 +619,7 @@ header {
   .home {
     min-height: 50rem;
     padding: 0;
+    background-image: linear-gradient(to right, rgba(165, 243, 252, 0.5), rgba(34, 211, 238, 0.5)), url(../img/img02.jpg);
   }
 }
 
