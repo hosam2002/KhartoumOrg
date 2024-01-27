@@ -1,0 +1,68 @@
+.nav {
+
+    &__checkbox { display: none; }
+    
+    &__button {
+
+        @include respond (break-490) { left: 4rem; }
+
+        position: absolute;
+        top: 50%;
+        left: 7.5rem;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 4rem;
+        height: 4rem;
+
+        z-index: 70;
+
+        cursor: pointer;
+    }
+
+    &__hamburger {
+
+        display: inline-block;
+        position: relative;
+    }
+
+    &__hamburger,
+    &__hamburger::after,
+    &__hamburger::before {
+
+        width: 80%;
+        height: .35rem;
+        border-radius: 10px;
+        background-color: $bg-slate-800;
+    }
+
+    &__hamburger::after,
+    &__hamburger::before {
+
+        content: "";
+        position: absolute;
+    }
+
+    &__hamburger::after { top: 10px; }
+    &__hamburger::before { top: -10px; }
+
+    &__disable { display: none !important; }
+}
+
+.nav {
+
+    &__checkbox:checked + &__button &__hamburger {
+
+        background-color: transparent;
+
+        &::after,
+        &::before { top: 0; }
+
+        &::after { transform: rotate(135deg); }
+        &::before { transform: rotate(-135deg); }
+    }
+
+}

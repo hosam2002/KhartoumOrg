@@ -1,0 +1,152 @@
+.about {
+
+    width: 100%;
+    min-height: 50rem;
+    margin-top: 5rem;
+    padding: 5rem; 
+}
+
+.about {
+
+    @include respond (break-1300) {
+
+        grid-template-columns: repeat(3, 35rem);
+    }
+
+    @include respond (break-1130) {
+
+        grid-template-columns: repeat(2, 40rem);
+    }
+
+    @include respond (break-865) {
+
+        grid-template-columns: repeat(1, 45rem);
+        gap: 5rem;
+    }
+
+    @include respond (break-490) {
+
+        grid-template-columns: repeat(1, 40rem);
+    }
+
+    @include respond (break-430) {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2.5rem 0;
+
+        & > *:not(:first-child) { margin: 0 0 2.5rem 0; }
+    }
+    
+    display: grid;
+    grid-template-columns: repeat(3, 40rem);
+    grid-template-rows: repeat(auto, 60rem);
+    place-content: center;
+
+    gap: 2.5rem;
+
+    &__card {
+
+        @include respond (break-1300) {
+
+            width: 35rem;
+            padding: 2.5rem;
+        }
+
+        @include respond (break-1130) {
+
+            width: 40rem;
+            min-height: 55rem;
+            max-height: 60rem;
+        }
+
+        @include respond (break-865) {
+
+            width: 45rem;
+        }
+
+        @include respond (break-490) {
+
+            width: 40rem;
+        }  
+        
+        @include respond (break-430) {
+
+            width: 90%;
+            height: auto;
+        }
+
+        width: 40rem;
+        min-height: 55rem;
+        max-height: 60rem;
+
+        padding: 3rem;
+        background-color: $bg-white;
+        border: 1px solid $bg-grey-200;
+        border-radius: 10px;
+
+        @include shadow-xl;
+
+        &--img {
+
+            display: grid;
+            place-content: center;
+            
+            height: 15rem;
+
+            & > img { width: 10rem; }
+        }
+
+        &--title,
+        &--desc {
+
+            height: max-content;
+        }
+
+        &--title {
+
+            margin-top: 2.5rem;
+            
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        &--desc {
+
+            margin-top: 3rem;
+
+            text-align: right;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.7rem;
+
+            color: $bg-grey-600;
+        }
+
+        &--list-heading { margin-bottom: 2.5rem; font-weight: 600; }
+        &--list:not(:last-child) { margin: 0 0 .85rem 0; }
+        &--list:nth-child(even) { color: $bg-yellow-800; font-weight: 600; }
+    }
+}
+
+#card-1 {
+
+    @include respond (break-1130) { order: 2; }
+    @include respond (break-865) { order: 1; }
+}
+
+#card-2 {
+
+    @include respond (break-1130) { order: 3; }
+    @include respond (break-865) { order: 2; }
+}
+
+#card-3 {
+
+    @include respond (break-1130) { order: 1; }
+    @include respond (break-865) { order: 3; }
+}

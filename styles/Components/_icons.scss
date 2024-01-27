@@ -1,0 +1,64 @@
+.i-nav {
+            
+    width: 3rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: $bg-white;
+    position: relative;
+
+    &::before,
+    &::after {
+
+        width: 3rem;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $bg-white;
+        display: inline-block;
+    }
+
+    &::after,
+    &::before {
+
+        content: "";
+        left: 0;
+        position: absolute;
+        transition: all .2s;
+    }
+
+    &::after {
+        
+        top: -10px
+    }
+
+    &::before {
+
+        top: 10px;
+    }
+}
+
+.i-center {
+
+    line-height: 1;
+    color: inherit;
+    text-align: center;
+
+    &-2 {
+        
+        font-size: 2rem;
+    }
+
+    &-3 {
+        
+        font-size: 3rem;
+    }
+
+    &-4 {
+        
+        font-size: 4rem;
+    }
+
+    &-5 {
+        
+        font-size: 5rem;
+    }
+}

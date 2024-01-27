@@ -1,0 +1,82 @@
+.home {
+
+    @include respond (break-550) {
+
+        padding: 3rem;
+    }
+
+    @include respond (break-600) {
+
+        min-height: 50rem;
+        padding: 0;
+    }
+
+    width: 100%;
+    min-height: 50rem;
+    padding: 5rem;
+    
+    background-image: 
+    linear-gradient(to right, rgba($bg-cyan-200, .8), rgba($bg-cyan-400, .8)), url(../img/img02.jpg),;
+
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__caption {
+
+        @include respond (break-865) {
+
+            width: 100%;
+        }
+
+        @include respond (break-550) {
+
+            padding: 3rem;
+        }
+
+        @include respond (break-600) {
+
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            border-radius: 0;
+        }
+
+        width: 80%;
+        min-height: 35rem;
+
+        margin: 0 auto;
+        padding: 5rem;
+
+        background-color: rgba($bg-grey-050, .65);
+        border-radius: 10px;
+    }
+
+    &__title,
+    &__desc {
+
+        text-align: right;
+    }
+
+    &__title {
+
+        margin-bottom: 2.5rem;
+        
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    &__desc {
+
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}

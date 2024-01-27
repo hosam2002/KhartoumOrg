@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    text-decoration: none;
+}
+
+html {
+
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: Tajawal, sans-serif, arial;
+}
+
+#root {
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section {
+
+    max-width: 128rem;
+    margin: 0 auto;
+}

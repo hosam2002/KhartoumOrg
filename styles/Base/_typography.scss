@@ -1,0 +1,9 @@
+.h-primary {
+
+    color: inherit;
+
+    font-size: 3.4rem;
+    font-weight: 400;
+
+    @include respond (break-470) { font-size: 3.0rem; line-height: 1.25; }
+}
