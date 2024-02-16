@@ -349,6 +349,134 @@ body {
   }
 }
 
+.cards {
+  max-width: 124rem;
+  padding: 1.5rem;
+  padding-bottom: 5rem;
+  margin-top: 10rem;
+  margin-inline: auto;
+  background-color: transparent;
+  /* === grid === */
+  display: grid;
+  grid-template-columns: repeat(3, 30rem);
+  grid-template-rows: auto;
+  place-content: center;
+  gap: 2.5rem;
+  row-gap: 6.5rem;
+}
+
+.cards__wrapper {
+  width: 30rem;
+  height: max-content;
+  margin-top: 5rem;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.cards__body, .cards__expand {
+  width: 100%;
+}
+.cards__body {
+  position: relative;
+  height: 12rem;
+  background-color: #FFFFFF;
+  border-radius: 5px 5px 0 0;
+  transition: height 0.4s ease-in-out;
+}
+.cards__expand {
+  position: relative;
+  padding: 1.5rem 0;
+  background-color: transparent;
+}
+.cards__button {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.cards__button > i {
+  font-size: 2.2rem;
+  line-height: none;
+  transition: transform 0.4s ease-in-out;
+  color: #9CA3AF;
+}
+.cards__checkbox {
+  display: none;
+}
+
+/* === cards up styles === */
+.cards__up {
+  padding-top: 6.5rem;
+  padding-bottom: 2.5rem;
+  width: 100%;
+  height: max-content;
+}
+.cards__img {
+  width: 8.5rem;
+  height: 8.5rem;
+  background-color: transparent;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.cards__img > img {
+  width: 8.5rem;
+}
+.cards__name, .cards__position {
+  width: 100%;
+  height: max-content;
+  text-align: center;
+}
+.cards__name {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.cards__position {
+  margin-top: 0.85rem;
+  font-size: 1.4rem;
+  color: #6B7280;
+}
+
+/* === cards down styles === */
+.cards__down {
+  display: none;
+  width: 100%;
+  height: max-content;
+  padding: 0.75rem;
+}
+.cards__work {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #E5E7EB;
+  font-size: 1.4rem;
+  text-align: right;
+  line-height: 1.7;
+}
+
+/* ====== rotate the icon ====== */
+.cards__checkbox:checked ~ .cards__button i {
+  transform: rotate(-180deg);
+}
+
 header {
   position: relative;
   background-color: #FFFFFF;
@@ -370,6 +498,9 @@ header {
 }
 .header__logo > img {
   width: 20rem;
+}
+.header__brand > img {
+  width: 10rem;
 }
 @media (max-width: 30.625em) {
   .header__logo > img {
@@ -604,7 +735,7 @@ header {
   min-height: 50rem;
   margin-top: 5rem;
   padding: 5rem;
-  background-color: rgba(254, 242, 242, 0.25);
+  background-color: transparent;
 }
 
 .members > :not(:last-child) {
@@ -717,7 +848,7 @@ footer {
   width: 100%;
   min-height: 25rem;
   padding: 5rem;
-  background-color: #f9fafb;
+  background-color: rgba(249, 250, 251, 0.8);
 }
 @media (max-width: 37.5em) {
   footer {

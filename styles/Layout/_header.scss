@@ -26,6 +26,11 @@ header {
         & > img { width: 20rem; }
     }
 
+    &__brand {
+
+        & > img { width: 10rem }
+    }
+
     @include respond (break-490) {
 
         &__logo { & > img { width: 15rem; } }
