@@ -218,3 +218,20 @@
         transform: rotate(-180deg);
     }
 }
+
+/* ====== sorting the cards ====== */
+
+#card-1 {
+
+    @include respond (break-1130) { order: 3; }
+}
+
+#card-2 {
+
+    @include respond (break-785) { order: 2; }
+}
+
+#card-3 {
+
+    @include respond (break-785) { order: 1; }
+}

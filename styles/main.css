@@ -507,6 +507,25 @@ body {
   transform: rotate(-180deg);
 }
 
+/* ====== sorting the cards ====== */
+@media (max-width: 70.625em) {
+  #card-1 {
+    order: 3;
+  }
+}
+
+@media (max-width: 49.0625em) {
+  #card-2 {
+    order: 2;
+  }
+}
+
+@media (max-width: 49.0625em) {
+  #card-3 {
+    order: 1;
+  }
+}
+
 header {
   position: relative;
   background-color: #FFFFFF;
@@ -603,162 +622,6 @@ header {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
-}
-
-.about {
-  width: 100%;
-  min-height: 50rem;
-  margin-top: 5rem;
-  padding: 5rem;
-}
-
-.about {
-  display: grid;
-  grid-template-columns: repeat(3, 40rem);
-  grid-template-rows: repeat(auto, 60rem);
-  place-content: center;
-  gap: 2.5rem;
-}
-@media (max-width: 81.25em) {
-  .about {
-    grid-template-columns: repeat(3, 35rem);
-  }
-}
-@media (max-width: 70.625em) {
-  .about {
-    grid-template-columns: repeat(2, 40rem);
-  }
-}
-@media (max-width: 54.0625em) {
-  .about {
-    grid-template-columns: repeat(1, 45rem);
-    gap: 5rem;
-  }
-}
-@media (max-width: 30.625em) {
-  .about {
-    grid-template-columns: repeat(1, 40rem);
-  }
-}
-@media (max-width: 26.875em) {
-  .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 0;
-  }
-  .about > *:not(:first-child) {
-    margin: 0 0 2.5rem 0;
-  }
-}
-.about__card {
-  width: 40rem;
-  min-height: 55rem;
-  max-height: 60rem;
-  padding: 3rem;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 81.25em) {
-  .about__card {
-    width: 35rem;
-    padding: 2.5rem;
-  }
-}
-@media (max-width: 70.625em) {
-  .about__card {
-    width: 40rem;
-    min-height: 55rem;
-    max-height: 60rem;
-  }
-}
-@media (max-width: 54.0625em) {
-  .about__card {
-    width: 45rem;
-  }
-}
-@media (max-width: 30.625em) {
-  .about__card {
-    width: 40rem;
-  }
-}
-@media (max-width: 26.875em) {
-  .about__card {
-    width: 90%;
-    height: auto;
-  }
-}
-.about__card--img {
-  display: grid;
-  place-content: center;
-  height: 15rem;
-}
-.about__card--img > img {
-  width: 10rem;
-}
-.about__card--title, .about__card--desc {
-  height: max-content;
-}
-.about__card--title {
-  margin-top: 2.5rem;
-  text-align: center;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-.about__card--desc {
-  margin-top: 3rem;
-  text-align: right;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.7rem;
-  color: #4B5563;
-}
-.about__card--list-heading {
-  margin-bottom: 2.5rem;
-  font-weight: 600;
-}
-.about__card--list:not(:last-child) {
-  margin: 0 0 0.85rem 0;
-}
-.about__card--list:nth-child(even) {
-  color: #854D0E;
-  font-weight: 600;
-}
-
-@media (max-width: 70.625em) {
-  #card-1 {
-    order: 2;
-  }
-}
-@media (max-width: 54.0625em) {
-  #card-1 {
-    order: 1;
-  }
-}
-
-@media (max-width: 70.625em) {
-  #card-2 {
-    order: 3;
-  }
-}
-@media (max-width: 54.0625em) {
-  #card-2 {
-    order: 2;
-  }
-}
-
-@media (max-width: 70.625em) {
-  #card-3 {
-    order: 1;
-  }
-}
-@media (max-width: 54.0625em) {
-  #card-3 {
-    order: 3;
-  }
 }
 
 .membership {

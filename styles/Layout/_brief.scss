@@ -14,25 +14,10 @@
 
     &__grid {
 
-        @include respond (break-1130) {
-
-            grid-template-columns: repeat(2, 40rem);
-        }
-
-        @include respond (break-865) {
-
-            grid-template-columns: repeat(2, 35rem);
-        }
-
-        @include respond (break-785) {
-
-            grid-template-columns: repeat(1, 35rem);
-        }
-
-        @include respond (break-370) {
-
-            grid-template-columns: repeat(1, 32rem);
-        }
+        @include respond (break-1130) { grid-template-columns: repeat(2, 40rem);}
+        @include respond (break-865) { grid-template-columns: repeat(2, 35rem); }
+        @include respond (break-785) { grid-template-columns: repeat(1, 35rem); }
+        @include respond (break-370) { grid-template-columns: repeat(1, 32rem); }
 
         max-width: 124rem;
         min-height: 35rem;
