@@ -78,6 +78,7 @@ cards.addEventListener(`click`, (e) => {
 
             body.style.height = `12rem`
             dropdown.style.display = `none`
+            event.checked = false;
         })
     }
 })

@@ -1,0 +1,149 @@
+.brief {
+
+    width: 100%;
+    height: max-content;
+    padding: 5rem;
+
+    background-color: transparent;
+    border-bottom: 1px solid $bg-grey-200;
+
+    @include shadow-md;
+}
+
+.brief {
+
+    &__grid {
+
+        @include respond (break-1130) {
+
+            grid-template-columns: repeat(2, 40rem);
+        }
+
+        @include respond (break-865) {
+
+            grid-template-columns: repeat(2, 35rem);
+        }
+
+        @include respond (break-785) {
+
+            grid-template-columns: repeat(1, 35rem);
+        }
+
+        @include respond (break-370) {
+
+            grid-template-columns: repeat(1, 32rem);
+        }
+
+        max-width: 124rem;
+        min-height: 35rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+
+        background-color: transparent;
+
+        display: grid;
+        grid-template-columns: repeat(3, 35rem);
+        grid-template-rows: repeat(auto, auto);
+        place-content: center;
+        gap: 2.5rem;
+    }
+
+    &__card {
+
+        @include respond (break-1130) { width: 40rem; }
+        @include respond (break-865) { width: 35rem; }
+        @include respond (break-370) { width: 32rem; }
+
+        width: 35rem;
+        height: max-content;
+
+        padding: 2.5rem;
+
+        background-color: $bg-white;
+        border-radius: 10px;
+        border: 1px solid $bg-grey-200;
+
+        @include shadow-md;
+
+        &--header,
+        &--title,
+        &--description {
+
+            width: 100%;
+        }
+
+        &--header {
+
+            margin-bottom: 2.5rem;
+            height: 10rem;
+
+            border-radius: 5px;
+
+            display: grid;
+            place-content: center;
+
+            & > img {
+
+                width: 13rem;
+            }
+        }
+
+        &--title,
+        &--heading,
+        &--body {
+
+            text-align: right;
+        }
+
+        &--title {
+
+            margin-bottom: 2.5rem;
+
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        &--heading {
+
+            font-size: 1.6rem;
+            color: $bg-grey-500;
+        }
+
+        &--body {
+
+            font-size: 1.6rem;
+            list-style: 1.7;
+        }
+
+        &--description {
+
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__list {
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        &--icon {
+
+            line-height: none;
+            
+            font-size: 1.8rem;
+            color: $bg-green-500;
+
+            margin-left: .85rem;
+        }
+
+        &--content {
+            
+            text-align: right;
+            font-size: 1.6rem;
+            list-style: 1.7;
+        }
+
+        &:not(:last-child) { margin-bottom: 1.5rem; }
+    }
+}
