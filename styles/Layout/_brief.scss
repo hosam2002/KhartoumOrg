@@ -4,10 +4,8 @@
     height: max-content;
     padding: 5rem;
 
-    background-color: transparent;
+    background-color: rgba($bg-grey-050, .85);
     border-bottom: 1px solid $bg-grey-200;
-
-    @include shadow-md;
 }
 
 .brief {
@@ -60,8 +58,10 @@
         &--header {
 
             margin-bottom: 2.5rem;
-            height: 10rem;
+            height: 15rem;
+            padding-bottom: 1.5rem;
 
+            border-bottom: 1px solid $bg-grey-300;
             border-radius: 5px;
 
             display: grid;

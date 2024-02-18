@@ -646,9 +646,8 @@ header {
   width: 100%;
   height: max-content;
   padding: 5rem;
-  background-color: transparent;
+  background-color: rgba(249, 250, 251, 0.85);
   border-bottom: 1px solid #E5E7EB;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .brief__grid {
@@ -712,7 +711,9 @@ header {
 }
 .brief__card--header {
   margin-bottom: 2.5rem;
-  height: 10rem;
+  height: 15rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #D1D5DB;
   border-radius: 5px;
   display: grid;
   place-content: center;
